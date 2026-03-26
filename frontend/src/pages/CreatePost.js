@@ -19,7 +19,7 @@ const CreatePost = () => {
       if (text) formData.append('text', text);
       if (image) formData.append('image', image);
 
-      await axios.post('https://social-app-sage-one.vercel.app//api/posts', formData, {
+      await axios.post('https://social-app-sage-one.vercel.app/api/posts', formData, {
         headers: {
           Authorization: `Bearer ${user.token}`,
           'Content-Type': 'multipart/form-data',

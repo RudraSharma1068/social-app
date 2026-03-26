@@ -34,7 +34,7 @@ const handleDelete = async () => {
   const handleLike = async () => {
     try {
       const res = await axios.post(
-        `https://social-app-sage-one.vercel.app//api/posts/${post._id}/like`,
+        `https://social-app-sage-one.vercel.app/api/posts/${post._id}/like`,
         {},
         { headers: { Authorization: `Bearer ${user.token}` } }
       );
