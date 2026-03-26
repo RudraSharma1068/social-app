@@ -14,7 +14,7 @@ const Login = () => {
 
   const handleSubmit = async () => {
     try {
-      const res = await axios.post('https://social-app-sage-one.vercel.app/api/posts')
+     const res = await axios.post('https://social-app-sage-one.vercel.app/api/auth/login', form);
       login(res.data.token, res.data.username);
       navigate('/');
     } catch (err) {
