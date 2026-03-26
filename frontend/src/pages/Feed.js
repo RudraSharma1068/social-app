@@ -9,7 +9,7 @@ const Feed = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/posts');
+      const res = await axios.get('https://social-app-sage-one.vercel.app/api/posts');
       setPosts(res.data);
     } catch (err) {
       console.log(err);
