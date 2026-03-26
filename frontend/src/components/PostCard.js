@@ -21,7 +21,7 @@ const PostCard = ({ post, onUpdate }) => {
 const handleDelete = async () => {
   try {
     await axios.delete(
-      `http://localhost:5000/api/posts/${post._id}`,
+      `https://social-app-sage-one.vercel.app/api/posts/${post._id}`,
       { headers: { Authorization: `Bearer ${user.token}` } }
     );
     onUpdate(post._id, { deleted: true });
@@ -48,7 +48,7 @@ const handleDelete = async () => {
     if (!comment.trim()) return;
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/posts/${post._id}/comment`,
+        `https://social-app-sage-one.vercel.app/api/posts/${post._id}/comment`,
         { text: comment },
         { headers: { Authorization: `Bearer ${user.token}` } }
       );
